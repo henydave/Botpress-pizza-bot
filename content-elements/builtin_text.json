@@ -1,0 +1,322 @@
+[
+  {
+    "id": "builtin_text-3Cm1JH",
+    "formData": {
+      "text$en": "Hello there ! I am your pizza bot",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-06T00:05:17.093Z",
+    "modifiedOn": "2019-06-06T00:16:58.958Z"
+  },
+  {
+    "id": "builtin_text-lA1b9G",
+    "formData": {
+      "text$en": "Hello and Welcome : )",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-06T00:06:08.568Z",
+    "modifiedOn": "2019-06-06T00:06:08.568Z"
+  },
+  {
+    "id": "builtin_text-Kxdnql",
+    "formData": {
+      "text$en": "What size pizza you want",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-06T00:12:32.460Z",
+    "modifiedOn": "2019-06-07T09:11:15.749Z"
+  },
+  {
+    "id": "builtin_text-wc7TCt",
+    "formData": {
+      "text$en": "What toppings u want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-06T00:17:27.136Z",
+    "modifiedOn": "2019-06-14T05:37:30.676Z"
+  },
+  {
+    "id": "builtin_text-Xl1nC2",
+    "formData": {
+      "text$en": "What toppings you want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-07T09:07:23.657Z",
+    "modifiedOn": "2019-06-10T06:11:43.271Z"
+  },
+  {
+    "id": "builtin_text-UxM9gK",
+    "formData": {
+      "text$en": "What size pizza you want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-07T11:03:58.998Z",
+    "modifiedOn": "2019-06-10T05:34:00.669Z"
+  },
+  {
+    "id": "builtin_text-I6Cros",
+    "formData": {
+      "text$en": "Okay, Pizza will be delivered soon",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-07T11:11:41.900Z",
+    "modifiedOn": "2019-06-07T11:51:23.018Z"
+  },
+  {
+    "id": "builtin_text--kv7Om",
+    "formData": {
+      "text$en": "Pizza will be delivered soon",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T05:35:09.441Z",
+    "modifiedOn": "2019-06-10T05:35:09.441Z"
+  },
+  {
+    "id": "builtin_text-C53ayD",
+    "formData": {
+      "text$en": "Please select from below options",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T06:05:54.027Z",
+    "modifiedOn": "2019-06-10T06:05:54.027Z"
+  },
+  {
+    "id": "builtin_text-AhgzZM",
+    "formData": {
+      "text$en": "You want {{user.topping}} pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T06:29:06.126Z",
+    "modifiedOn": "2019-06-11T07:23:57.455Z"
+  },
+  {
+    "id": "builtin_text-lnigl7",
+    "formData": {
+      "text$en": "What toppings you want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T06:34:25.744Z",
+    "modifiedOn": "2019-06-11T07:10:58.361Z"
+  },
+  {
+    "id": "builtin_text-4B2C4y",
+    "formData": {
+      "text$en": "I want pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T09:51:55.013Z",
+    "modifiedOn": "2019-06-10T09:51:55.013Z"
+  },
+  {
+    "id": "builtin_text-JnqUM4",
+    "formData": {
+      "text$en": "Ur topping is invalid",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T10:01:05.325Z",
+    "modifiedOn": "2019-06-13T05:38:17.199Z"
+  },
+  {
+    "id": "builtin_text-M-0MQs",
+    "formData": {
+      "text$en": "You want {{session.extractedSlots.size.value}} {{session.extractedSlots.topping.value}} pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T10:07:10.993Z",
+    "modifiedOn": "2019-06-10T10:35:15.243Z"
+  },
+  {
+    "id": "builtin_text-QnFonE",
+    "formData": {
+      "text$en": "Good choice !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T10:11:33.316Z",
+    "modifiedOn": "2019-06-10T10:11:33.316Z"
+  },
+  {
+    "id": "builtin_text-Rd6Cwo",
+    "formData": {
+      "text$en": "Not able to find what you are looking for i.e size, topping",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T10:18:41.027Z",
+    "modifiedOn": "2019-06-10T10:18:41.027Z"
+  },
+  {
+    "id": "builtin_text-8MctI-",
+    "formData": {
+      "text$en": "Size, topping already extracted",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T10:19:43.946Z",
+    "modifiedOn": "2019-06-10T10:19:43.946Z"
+  },
+  {
+    "id": "builtin_text-dbTVTB",
+    "formData": {
+      "text$en": "checking intent provide all called",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T11:07:53.671Z",
+    "modifiedOn": "2019-06-10T11:07:53.671Z"
+  },
+  {
+    "id": "builtin_text-dvXGMU",
+    "formData": {
+      "text$en": "checking...on already extracted is executed",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-10T11:12:42.764Z",
+    "modifiedOn": "2019-06-11T06:07:07.934Z"
+  },
+  {
+    "id": "builtin_text-Z0U8DQ",
+    "formData": {
+      "text$en": "What you want ??",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T06:16:10.125Z",
+    "modifiedOn": "2019-06-13T06:16:10.125Z"
+  },
+  {
+    "id": "builtin_text-eXuaq1",
+    "formData": {
+      "text$en": "What size pizza u want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T06:39:49.086Z",
+    "modifiedOn": "2019-06-13T06:39:49.086Z"
+  },
+  {
+    "id": "builtin_text-OOOg9u",
+    "formData": {
+      "text$en": "Select appropriate size",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T06:40:13.331Z",
+    "modifiedOn": "2019-06-13T06:40:13.331Z"
+  },
+  {
+    "id": "builtin_text-LIRwkM",
+    "formData": {
+      "text$en": "You want large {{session.extractedSlots.topping.value}} pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T07:59:22.610Z",
+    "modifiedOn": "2019-06-13T08:08:30.442Z"
+  },
+  {
+    "id": "builtin_text-a7Qdlx",
+    "formData": {
+      "text$en": "You want medium {{session.extractedSlots.topping.value}} pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T07:59:58.472Z",
+    "modifiedOn": "2019-06-13T08:09:01.312Z"
+  },
+  {
+    "id": "builtin_text-dGk3vZ",
+    "formData": {
+      "text$en": "You want small {{session.extractedSlots.topping.value}} pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T08:00:27.354Z",
+    "modifiedOn": "2019-06-13T08:09:23.082Z"
+  },
+  {
+    "id": "builtin_text-JJ9A4Q",
+    "formData": {
+      "text$en": "Failed ! :(",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-13T08:01:05.297Z",
+    "modifiedOn": "2019-06-13T08:01:05.297Z"
+  },
+  {
+    "id": "builtin_text-pnVERd",
+    "formData": {
+      "text$en": "What size pizza you want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T04:52:16.988Z",
+    "modifiedOn": "2019-06-14T04:52:16.988Z"
+  },
+  {
+    "id": "builtin_text-bJPOwP",
+    "formData": {
+      "text$en": "Wrong toppings",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T04:52:36.060Z",
+    "modifiedOn": "2019-06-14T04:52:36.060Z"
+  },
+  {
+    "id": "builtin_text-7YcZYF",
+    "formData": {
+      "text$en": "What size you want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T04:55:16.772Z",
+    "modifiedOn": "2019-06-14T04:55:16.772Z"
+  },
+  {
+    "id": "builtin_text-RUA7jB",
+    "formData": {
+      "text$en": "You want {{user.size}} {{user.topping}} pizza",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T04:57:25.636Z",
+    "modifiedOn": "2019-06-14T04:57:25.636Z"
+  },
+  {
+    "id": "builtin_text--2YGYF",
+    "formData": {
+      "text$en": "What do you want ??",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T05:38:24.275Z",
+    "modifiedOn": "2019-06-14T05:38:24.275Z"
+  },
+  {
+    "id": "builtin_text-e4aX1a",
+    "formData": {
+      "text$en": "What toppings do u want ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T05:39:41.210Z",
+    "modifiedOn": "2019-06-14T05:39:41.210Z"
+  }
+]

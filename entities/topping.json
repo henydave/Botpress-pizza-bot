@@ -1,0 +1,50 @@
+{
+  "sensitive": false,
+  "fuzzy": true,
+  "name": "topping",
+  "type": "list",
+  "occurences": [
+    {
+      "name": "cheese",
+      "synonyms": [
+        "Cheese",
+        "cheze",
+        "chese",
+        "chesse"
+      ]
+    },
+    {
+      "name": "onions",
+      "synonyms": [
+        "onins",
+        "Onions",
+        "nions"
+      ]
+    },
+    {
+      "name": "tomatoes",
+      "synonyms": [
+        "Tamates",
+        "tomataes",
+        "tamatas"
+      ]
+    },
+    {
+      "name": "olives",
+      "synonyms": [
+        "olvs",
+        "olivs",
+        "oolives"
+      ]
+    },
+    {
+      "name": "pepper",
+      "synonyms": [
+        "pepperoni",
+        "peper",
+        "peperoni"
+      ]
+    }
+  ],
+  "pattern": ""
+}

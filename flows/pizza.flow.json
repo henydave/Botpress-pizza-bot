@@ -1,0 +1,250 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": [],
+    "onReceive": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "fa009bd411",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "provide"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-3Cm1JH",
+        "say #!builtin_text-Z0U8DQ"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "b8903add1e",
+      "name": "provide_topping",
+      "next": [
+        {
+          "condition": "true",
+          "node": "provide_all"
+        }
+      ],
+      "onEnter": [
+        "builtin/setGlobalVariable {\"name\":\"user\",\"value\":\"size\",\"expiry\":\"never\",\"output\":\"{{event.payload.text}}\"}",
+        "say #!builtin_text-lnigl7"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"topping\",\"value\":\"{{event.payload.text}}\"}"
+      ]
+    },
+    {
+      "id": "4788000758",
+      "name": "provide_all",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-AhgzZM",
+        "say #!builtin_text--kv7Om"
+      ],
+      "onReceive": []
+    },
+    {
+      "id": "e33e8d9eaf",
+      "name": "provide",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'provide_none'",
+          "node": "choice-e0d5b5"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'provide_all'",
+          "node": "Slot-ebf541"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'provide_size'",
+          "node": "Slot-ebf541"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'provide_topping'",
+          "node": "slot_topping"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": []
+    },
+    {
+      "id": "53ebeaba96",
+      "name": "Failed_size",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-e0d5b5"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-C53ayD"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "9272b3e814",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "slot_topping",
+      "flow": "skills/Slot-e6ed28.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "all_provided"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "not_found"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "node-d1a6"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "0198fcea12",
+      "name": "not_found",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Rd6Cwo"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "e5ba56cd2f",
+      "name": "node-a81c",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Rd6Cwo"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "5b69056ffa",
+      "name": "node-385b",
+      "next": [
+        {
+          "condition": "true",
+          "node": "slot_topping"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-dvXGMU",
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "5de7740d43",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "Slot-ebf541",
+      "flow": "skills/Slot-ebf541.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "node-dd22"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "node-a81c"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "node-385b"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "0bd8bc0d9b",
+      "name": "node-dd22",
+      "next": [
+        {
+          "condition": "true",
+          "node": "slot_topping"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-dvXGMU",
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "533c86e9d5",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-e0d5b5",
+      "flow": "skills/choice-e0d5b5.flow.json",
+      "next": [
+        {
+          "caption": "User picked [large]",
+          "condition": "temp['skill-choice-ret'] == \"large\"",
+          "node": "provide_topping"
+        },
+        {
+          "caption": "User picked [medium]",
+          "condition": "temp['skill-choice-ret'] == \"medium\"",
+          "node": "provide_topping"
+        },
+        {
+          "caption": "User picked [small]",
+          "condition": "temp['skill-choice-ret'] == \"small\"",
+          "node": "provide_topping"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "Failed_size"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "e7a9bef2eb",
+      "name": "all_provided",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-QnFonE",
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": []
+    },
+    {
+      "id": "5902d5aeec",
+      "name": "node-d1a6",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'provide_topping'",
+          "node": "choice-e0d5b5"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": null
+    }
+  ]
+}

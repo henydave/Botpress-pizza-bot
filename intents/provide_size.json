@@ -1,0 +1,26 @@
+{
+  "name": "provide_size",
+  "utterances": [
+    "[Large](size)",
+    "[medium](size)",
+    "[small](size)",
+    "[large](size)",
+    "I want [small](size) pizza",
+    "[small](size) pizza",
+    "[Large](size) pizza",
+    "I want [large](size) pizza"
+  ],
+  "slots": [
+    {
+      "id": "vbboU9XwQuE0Osozcuuty",
+      "name": "size",
+      "entities": [
+        "size"
+      ],
+      "color": 1
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}

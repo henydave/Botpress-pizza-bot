@@ -1,0 +1,22 @@
+{
+  "name": "provide_topping",
+  "utterances": [
+    "[olives](topping)",
+    "[Cheese](topping)",
+    "[cheese](topping) pizza",
+    "I want [cheese](topping) pizza"
+  ],
+  "slots": [
+    {
+      "id": "PPlGiqr4De6EocRf22T2T",
+      "name": "topping",
+      "entities": [
+        "topping"
+      ],
+      "color": 3
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}

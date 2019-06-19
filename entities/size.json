@@ -1,0 +1,32 @@
+{
+  "sensitive": false,
+  "fuzzy": true,
+  "name": "size",
+  "type": "list",
+  "occurences": [
+    {
+      "name": "large",
+      "synonyms": [
+        "Large",
+        "lrg",
+        "Lrge"
+      ]
+    },
+    {
+      "name": "small",
+      "synonyms": [
+        "Small",
+        "smll",
+        "mll"
+      ]
+    },
+    {
+      "name": "medium",
+      "synonyms": [
+        "Medium",
+        "midium",
+        "midum"
+      ]
+    }
+  ]
+}

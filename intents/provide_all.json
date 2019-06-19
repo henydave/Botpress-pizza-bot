@@ -1,0 +1,32 @@
+{
+  "name": "provide_all",
+  "utterances": [
+    "[large](size) [cheese](topping) pizza",
+    "[small](size) [onions](topping) pizza",
+    "i want [large](size) [olives](topping) pizza",
+    "[medium](size) [pepper](topping) pizza",
+    "want [small](size) [olives](topping) pizza",
+    "I want [large](size) [cheese](topping) pizza"
+  ],
+  "slots": [
+    {
+      "id": "dpj4OB-6bmxC3-YqnswQG",
+      "name": "size",
+      "entities": [
+        "size"
+      ],
+      "color": 1
+    },
+    {
+      "id": "YIbw4eSZ2PIEnnkJPl0IR",
+      "name": "topping",
+      "entities": [
+        "any"
+      ],
+      "color": 2
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}

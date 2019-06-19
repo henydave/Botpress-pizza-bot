@@ -1,0 +1,348 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": [],
+    "onReceive": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "provide"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-3Cm1JH",
+        "say #!builtin_text-Z0U8DQ"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "191591bca1",
+      "name": "provide_topping",
+      "next": [
+        {
+          "condition": "true",
+          "node": "provide_all"
+        }
+      ],
+      "onEnter": [
+        "builtin/setGlobalVariable {\"name\":\"user\",\"value\":\"size\",\"expiry\":\"never\",\"output\":\"{{event.payload.text}}\"}",
+        "say #!builtin_text-lnigl7"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"topping\",\"value\":\"{{event.payload.text}}\"}"
+      ]
+    },
+    {
+      "id": "456d52c311",
+      "name": "provide_all",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-AhgzZM",
+        "say #!builtin_text--kv7Om"
+      ],
+      "onReceive": []
+    },
+    {
+      "id": "e45c2375c5",
+      "name": "provide",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'provide_none'",
+          "node": "choice-e0d5b5"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'provide_all'",
+          "node": "Slot-9a7d0c"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'provide_size'",
+          "node": "Slot-ebf541"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'provide_topping'",
+          "node": "Slot-51af0f"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": []
+    },
+    {
+      "id": "201decdeb8",
+      "name": "Failed_size",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-e0d5b5"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-C53ayD"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-e6ed28",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "slot_topping",
+      "flow": "skills/Slot-e6ed28.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "all_provided"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "not_found"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "node-d1a6"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "862d51811c",
+      "name": "not_found",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Rd6Cwo"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "5c7f0b15ca",
+      "name": "node-a81c",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Rd6Cwo"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "9be57ed2e7",
+      "name": "node-385b",
+      "next": [
+        {
+          "condition": "true",
+          "node": "slot_topping"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-ebf541",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "Slot-ebf541",
+      "flow": "skills/Slot-ebf541.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "node-dd22"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "node-a81c"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "node-385b"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "59324e44db",
+      "name": "node-dd22",
+      "next": [
+        {
+          "condition": "true",
+          "node": "slot_topping"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-e0d5b5",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-e0d5b5",
+      "flow": "skills/choice-e0d5b5.flow.json",
+      "next": [
+        {
+          "caption": "User picked [large]",
+          "condition": "temp['skill-choice-ret'] == \"large\"",
+          "node": "provide_topping"
+        },
+        {
+          "caption": "User picked [medium]",
+          "condition": "temp['skill-choice-ret'] == \"medium\"",
+          "node": "provide_topping"
+        },
+        {
+          "caption": "User picked [small]",
+          "condition": "temp['skill-choice-ret'] == \"small\"",
+          "node": "provide_topping"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "Failed_size"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "c3676669cd",
+      "name": "all_provided",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-QnFonE",
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": []
+    },
+    {
+      "id": "168e29d10c",
+      "name": "node-d1a6",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-M-0MQs",
+        "say #!builtin_text-7YcZYF"
+      ],
+      "onReceive": [
+        "say #!builtin_text-RUA7jB"
+      ]
+    },
+    {
+      "id": "skill-51af0f",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "Slot-51af0f",
+      "flow": "skills/Slot-51af0f.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "all_provided"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "not_found"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "node-d1a6"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-9a7d0c",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "Slot-9a7d0c",
+      "flow": "skills/Slot-9a7d0c.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "Slot-d8e970"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": ""
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "Slot-d8e970"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-d8e970",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "Slot-d8e970",
+      "flow": "skills/Slot-d8e970.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "node-fb75"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": ""
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "node-fb75"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "ace8e03b84",
+      "name": "node-fb75",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-M-0MQs"
+      ],
+      "onReceive": null
+    }
+  ]
+}

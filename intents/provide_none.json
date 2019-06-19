@@ -1,0 +1,16 @@
+{
+  "name": "provide_none",
+  "utterances": [
+    "pizza",
+    "want a pizza",
+    "I want a pizza",
+    "want to oder pizza",
+    "I want to oder pizza",
+    "Pizza",
+    "I want pizza"
+  ],
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

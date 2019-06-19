@@ -1,0 +1,86 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "efe89ea78e",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-858e91"
+        }
+      ]
+    },
+    {
+      "id": "fab24d1c4e",
+      "name": "node-0d15",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-LIRwkM"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "62f40fad93",
+      "name": "node-390e",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-a7Qdlx"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "70bfb5afc9",
+      "name": "node-b2be",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-dGk3vZ"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "3e32079db1",
+      "name": "node-3e13",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-JJ9A4Q"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-858e91",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-858e91",
+      "flow": "skills/choice-858e91.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Large]",
+          "condition": "temp['skill-choice-ret'] == \"Large\"",
+          "node": "node-0d15"
+        },
+        {
+          "caption": "User picked [Medium]",
+          "condition": "temp['skill-choice-ret'] == \"Medium\"",
+          "node": "node-390e"
+        },
+        {
+          "caption": "User picked [Small]",
+          "condition": "temp['skill-choice-ret'] == \"Small\"",
+          "node": "node-b2be"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "node-3e13"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

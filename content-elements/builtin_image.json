@@ -1,0 +1,12 @@
+[
+  {
+    "id": "builtin_image-az3ezi",
+    "formData": {
+      "image$en": "/api/v1/bots/pizza_bot/media/r1x6l7vy60zml5elxpd7-download.jpg",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-06T00:06:29.641Z",
+    "modifiedOn": "2019-06-06T00:06:29.641Z"
+  }
+]
